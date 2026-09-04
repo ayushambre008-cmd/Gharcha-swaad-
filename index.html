@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>घारचा स्वाद | Gharcha Swaad</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+body{
+    background:#fff8ec;
+    color:#4b1b13;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    height:78px;
+    background:#5b0909;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 5%;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px #0004;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-circle{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#fff9e9;
+    border:4px solid #d69a35;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#8e1712;
+    font-weight:900;
+    font-size:15px;
+    line-height:1.1;
+    box-shadow:0 2px 8px #0005;
+}
+
+.logo-text{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.logo-text small{
+    display:block;
+    font-size:10px;
+    color:#ffd45c;
+    letter-spacing:1px;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#ffd45c;
+}
+
+.whatsapp-top{
+    background:#ffd329;
+    color:#531000;
+    padding:10px 18px;
+    border-radius:10px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:365px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    padding:40px 6%;
+
+    background:
+    linear-gradient(90deg,#fff4d8ee 0%,#fff0cfcc 48%,#00000022 100%),
+    url("C:\Users\NILESH AMBRE\OneDrive\Desktop\pic\ChatGPT Image Aug 19, 2026, 09_26_08 PM_edited.png");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:580px;
+}
+
+.hero h1{
+    font-size:65px;
+    color:#971d17;
+    font-weight:900;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    display:inline-block;
+    background:#ffd75c;
+    padding:7px 25px;
+    border-radius:25px;
+    color:#6b1710;
+    font-size:23px;
+}
+
+.hero p{
+    margin-top:18px;
+    font-size:21px;
+    font-weight:600;
+}
+
+.pickup{
+    margin-top:18px;
+    display:inline-block;
+    background:#8f1815;
+    color:white;
+    padding:13px 30px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* ================= SECTION TITLE ================= */
+
+.section-title{
+    text-align:center;
+    padding:32px 15px 20px;
+}
+
+.section-title h2{
+    font-size:34px;
+    color:#71110e;
+}
+
+.section-title h2::before{
+    content:"••• ";
+    color:#b53628;
+}
+
+.section-title h2::after{
+    content:" •••";
+    color:#b53628;
+}
+
+.section-title p{
+    color:#777;
+    margin-top:5px;
+}
+
+/* ================= MENU ================= */
+
+.menu{
+    width:94%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.food-card{
+    background:#fffdf8;
+    border:1px solid #e9d8bc;
+    border-radius:16px;
+    padding:8px 8px 14px;
+    text-align:center;
+    box-shadow:0 3px 12px #0000000d;
+    transition:.25s;
+}
+
+.food-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 7px 20px #0002;
+}
+
+.food-img{
+    width:100%;
+    height:145px;
+    object-fit:cover;
+    border-radius:11px;
+}
+
+.food-card h3{
+    margin-top:7px;
+    font-size:18px;
+}
+
+.food-card .eng{
+    color:#777;
+    font-size:13px;
+    margin-top:2px;
+}
+
+.price{
+    color:#a61915;
+    font-size:21px;
+    font-weight:900;
+    margin:5px 0;
+}
+
+.preorder{
+    display:inline-block;
+    color:#b01a15;
+    font-weight:bold;
+    font-size:12px;
+    margin-bottom:5px;
+}
+
+.quantity{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:13px;
+    margin:7px 0;
+}
+
+.quantity button{
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    border:1px solid #e6b88e;
+    background:#fff0df;
+    color:#9d211a;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.quantity span{
+    font-weight:bold;
+}
+
+.add{
+    background:#941713;
+    color:white;
+    border:0;
+    padding:9px 23px;
+    border-radius:7px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.add:hover{
+    background:#70100d;
+}
+
+/* ================= CART ================= */
+
+.cart-section{
+    width:94%;
+    max-width:1200px;
+    margin:35px auto;
+}
+
+.cart-wrapper{
+    display:grid;
+    grid-template-columns:1.6fr 1fr;
+    gap:20px;
+}
+
+.cart-box,
+.total-box{
+    background:#fffdf8;
+    border:1px solid #e4cfae;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.cart-header{
+    background:#5e0909;
+    color:white;
+    padding:15px;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    font-weight:bold;
+}
+
+.cart-content{
+    min-height:190px;
+    padding:20px;
+}
+
+.empty{
+    text-align:center;
+    padding:50px 10px;
+    color:#777;
+}
+
+.cart-row{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    align-items:center;
+    border-bottom:1px solid #eee;
+    padding:10px 0;
+}
+
+.cart-controls{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.cart-controls button{
+    width:27px;
+    height:27px;
+    border-radius:50%;
+    border:0;
+    background:#941713;
+    color:white;
+    cursor:pointer;
+}
+
+.total-box{
+    padding:25px;
+    text-align:center;
+}
+
+.total-box h3{
+    font-size:20px;
+}
+
+.total-price{
+    font-size:30px;
+    font-weight:900;
+    color:#8d1712;
+    margin:10px;
+}
+
+.whatsapp{
+    display:block;
+    background:#19b957;
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.number{
+    margin-top:10px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.no-delivery{
+    margin-top:18px;
+    border:1px solid #e8b96f;
+    background:#fff5df;
+    padding:10px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* ================= ABOUT & CONTACT ================= */
+
+.about{
+    background:#fff1d8;
+    padding:45px 8%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.about h2{
+    color:#72100d;
+    margin-bottom:15px;
+}
+
+.about p{
+    line-height:1.7;
+    color:#604d43;
+    margin-bottom:8px;
+}
+
+.address{
+    background:#fffaf0;
+    border-left:5px solid #941713;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
+    line-height:1.6;
+}
+
+.map-button{
+    display:inline-block;
+    margin-top:15px;
+    background:#941713;
+    color:white;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.map-button:hover{
+    background:#70100d;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#570707;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+footer h2{
+    color:#ffd45a;
+}
+
+footer p{
+    margin-top:7px;
+}
+
+footer a{
+    color:#42e879;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .menu{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    nav{
+        gap:12px;
+    }
+
+    .whatsapp-top{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+}
+
+@media(max-width:600px){
+
+    header{
+        height:auto;
+        padding:10px 15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .logo-text{
+        font-size:18px;
+    }
+
+    .logo-circle{
+        width:58px;
+        height:58px;
+        font-size:12px;
+    }
+
+    nav{
+        width:100%;
+        justify-content:center;
+        padding:5px 0;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:360px;
+        padding:30px 20px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero h2{
+        font-size:17px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .menu{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .food-img{
+        height:110px;
+    }
+
+    .food-card h3{
+        font-size:15px;
+    }
+
+    .food-card .eng{
+        font-size:11px;
+    }
+
+    .price{
+        font-size:18px;
+    }
+
+    .add{
+        padding:8px 13px;
+        font-size:12px;
+    }
+
+    .cart-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .cart-header,
+    .cart-row{
+        grid-template-columns:1.5fr .8fr .8fr .8fr;
+        font-size:12px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+
+        <div class="logo-circle">
+            🏠<br>
+            घारचा<br>
+            स्वाद
+        </div>
+
+        <div class="logo-text">
+            घारचा स्वाद
+            <small>GHARCHA SWAAD</small>
+        </div>
+
+    </div>
+
+    <nav>
+        <a href="#home">होम</a>
+        <a href="#menu">मेन्यू</a>
+        <a href="#cart">आपला ऑर्डर</a>
+        <a href="#about">आमच्याबद्दल</a>
+        <a href="#contact">संपर्क</a>
+    </nav>
+
+    <a class="whatsapp-top"
+       href="https://wa.me/919076285991"
+       target="_blank">
+       🟢 ऑर्डर करा<br>
+       9076286591
+    </a>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>घारचा स्वाद ♡</h1>
+
+        <h2>❤️ घरच्या चवीचा अस्सल स्वाद ❤️</h2>
+
+        <p>
+            Fresh • Hygienic • Delicious
+        </p>
+
+        <div class="pickup">
+            🚫 No Home Delivery<br>
+            Pickup Only
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MENU ================= -->
+
+<section id="menu">
+
+    <div class="section-title">
+
+        <h2>आमचा मेन्यू</h2>
+
+        <p>Fresh & Delicious Maharashtrian Nashta</p>
+
+    </div>
+
+
+    <div class="menu">
+
+        <!-- KANDE POHE -->
+
+        <div class="food-card">
+
+            <img class="food-img"
+            src="kande pohe.jpeg"
+            alt="कांदे पोहे ">
+
+            <h3>कांदे पोहे</h3>
+
+            <div class="eng">
+                Kande Pohe
+            </div>
+
+            <div class="price">
+                ₹30
+            </div>
+
+            <div class="quantity">
+
+                <button onclick="changeQty('pohe',-1)">
+                    −
+                </button>
+
+                <span id="qty-pohe">0</span>
+
+                <button onclick="changeQty('pohe',1)">
+                    +
+                </button>
+
+            </div>
+
+            <button class="add" onclick="addItem('pohe')">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- UPMA -->
+
+        <div class="food-card">
+
+            <img class="food-img"
+            src="upma.avif"
+            alt="उपमा">
+
+            <h3>उपमा</h3>
+
+            <div class="eng">
+                Upma
+            </div>
+
+            <div class="price">
+                ₹30
+            </div>
+
+            <div class="quantity">
+
+                <button onclick="changeQty('upma',-1)">
+                    −
+                </button>
+
+                <span id="qty-upma">0</span>
+
+                <button onclick="changeQty('upma',1)">
+                    +
+                </button>
+
+            </div>
+
+            <button class="add" onclick="addItem('upma')">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- DHOKLA -->
+
+        <div class="food-card">
+
+            <img class="food-img"
+            src="1200x1200-khaman-dhokla.jpg"
+            alt="ढोकळा">
+
+            <h3>ढोकळा</h3>
+
+            <div class="eng">
+                Dhokla (4 pcs)
+            </div>
+
+            <div class="price">
+                ₹30
+            </div>
+
+            <div class="quantity">
+
+                <button onclick="changeQty('dhokla',-1)">
+                    −
+                </button>
+
+                <span id="qty-dhokla">0</span>
+
+                <button onclick="changeQty('dhokla',1)">
+                    +
+                </button>
+
+            </div>
+
+            <button class="add" onclick="addItem('dhokla')">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- PURANPOLI -->
+
+        <div class="food-card">
+
+            <img class="food-img"
+            src="Puran-Poli-2-3 (1).jpg"
+            alt="पुरणपोळी">
+
+            <h3>पुरणपोळी</h3>
+
+            <div class="eng">
+                Puranpoli
+            </div>
+
+            <div class="price">
+                ₹25
+            </div>
+
+            <div class="quantity">
+
+                <button onclick="changeQty('puranpoli',-1)">
+                    −
+                </button>
+
+                <span id="qty-puranpoli">0</span>
+
+                <button onclick="changeQty('puranpoli',1)">
+                    +
+                </button>
+
+            </div>
+
+            <button class="add" onclick="addItem('puranpoli')">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- SABUDANA KHICHDI -->
+
+        <div class="food-card">
+
+            <img class="food-img"
+            src="sabudana khichdi.jpg"
+            alt="साबुदाणा खिचडी">
+
+            <h3>साबुदाणा खिचडी</h3>
+
+            <div class="eng">
+                Sabudana Khichdi
+            </div>
+
+            <div class="price">
+                ₹30
+            </div>
+
+            <div class="quantity">
+
+                <button onclick="changeQty('sabudana',-1)">
+                    −
+                </button>
+
+                <span id="qty-sabudana">0</span>
+
+                <button onclick="changeQty('sabudana',1)">
+                    +
+                </button>
+
+            </div>
+
+            <button class="add" onclick="addItem('sabudana')">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- PURI BHAJI -->
+
+        <div class="food-card">
+
+            <img class="food-img"
+            src="puri bhaji.jpeg"
+            alt="पुरी भाजी">
+
+            <h3>पुरी भाजी</h3>
+
+            <div class="eng">
+                Puri Bhaji
+            </div>
+
+            <div class="price">
+                ₹30
+            </div>
+
+            <div class="quantity">
+
+                <button onclick="changeQty('puri',-1)">
+                    −
+                </button>
+
+                <span id="qty-puri">0</span>
+
+                <button onclick="changeQty('puri',1)">
+                    +
+                </button>
+
+            </div>
+
+            <button class="add" onclick="addItem('puri')">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+
+        <!-- MODAK -->
+
+        <div class="food-card">
+
+            <img class="food-img"
+            src="modak.jpeg"
+            alt="मोदक">
+
+            <h3>मोदक</h3>
+
+            <div class="preorder">
+                (Pre Order Only)
+            </div>
+
+            <div class="eng">
+                Modak (1 pc)
+            </div>
+
+            <div class="price">
+                ₹30
+            </div>
+
+            <div class="quantity">
+
+                <button onclick="changeQty('modak',-1)">
+                    −
+                </button>
+
+                <span id="qty-modak">0</span>
+
+                <button onclick="changeQty('modak',1)">
+                    +
+                </button>
+
+            </div>
+
+            <button class="add" onclick="addItem('modak')">
+                🛒 Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CART ================= -->
+
+<section id="cart" class="cart-section">
+
+    <div class="section-title">
+        <h2>आपला ऑर्डर</h2>
+    </div>
+
+    <div class="cart-wrapper">
+
+        <div class="cart-box">
+
+            <div class="cart-header">
+                <span>पदार्थ</span>
+                <span>किंमत</span>
+                <span>प्रमाण</span>
+                <span>एकूण</span>
+            </div>
+
+            <div class="cart-content" id="cartContent">
+
+                <div class="empty">
+
+                    🛒<br><br>
+
+                    तुमची कार्ट रिकामी आहे.<br>
+
+                    कृपया मेन्यू मधून पदार्थ जोडा.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="total-box">
+
+            <h3>एकूण रक्कम</h3>
+
+            <div class="total-price">
+                ₹<span id="total">0</span>
+            </div>
+
+            <a class="whatsapp"
+               href="#"
+               onclick="sendWhatsApp(); return false;">
+
+               🟢 ऑर्डर WhatsApp वर पाठवा
+
+            </a>
+
+            <div class="number">
+                📱 9076286591
+            </div>
+
+            <div class="no-delivery">
+
+                🚫 No Home Delivery<br>
+                Pickup Only
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT & CONTACT ================= -->
+
+<section class="about" id="about">
+
+    <div>
+
+        <h2>आमच्याबद्दल</h2>
+
+        <p>
+            घारचा स्वाद मध्ये आम्ही तुम्हाला घरच्या चवीचा,
+            ताजा आणि स्वच्छतेने बनवलेला महाराष्ट्रीयन नाश्ता
+            देतो.
+        </p>
+
+        <p>
+            प्रत्येक पदार्थ घरच्या सारखा स्वाद देण्यासाठी
+            प्रेमाने तयार केला जातो.
+        </p>
+
+        <br>
+
+        <b>
+            घरचा स्वाद... कायम तुमच्या सोबत! ❤️
+        </b>
+
+    </div>
+
+
+    <div id="contact">
+
+        <h2>संपर्क आणि पत्ता</h2>
+
+        <p>
+            🟢 WhatsApp:
+            <b>9076286591</b>
+        </p>
+
+        <div class="address">
+
+            📍 <b>Shop Address</b><br>
+
+            Opposite Balaji Clinic,<br>
+            Near Sonapur Lane,<br>
+            Worli Koliwada,<br>
+            Mumbai - 400030
+
+        </div>
+
+
+        <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Opposite%20Balaji%20Clinic%20near%20Sonapur%20Lane%20Worli%20Koliwada%20Mumbai%20400030"
+        target="_blank">
+
+            📍 View on Google Maps
+
+        </a>
+
+
+        <div class="no-delivery">
+
+            🚫 Home Delivery उपलब्ध नाही<br>
+            🏠 Pickup Only
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h2>घारचा स्वाद</h2>
+
+    <p>
+        घरच्या चवीचा अस्सल स्वाद ❤️
+    </p>
+
+    <p>
+        📍 Opposite Balaji Clinic,
+        Near Sonapur Lane,
+        Worli Koliwada,
+        Mumbai - 400030
+    </p>
+
+    <p>
+        WhatsApp:
+        <a href="https://wa.me/919076285991" target="_blank">
+            9076286591
+        </a>
+    </p>
+
+    <p>
+        🚫 No Home Delivery | Pickup Only
+    </p>
+
+    <p>
+        © 2026 घारचा स्वाद | All Rights Reserved
+    </p>
+
+</footer>
+
+
+<script>
+
+/* ================= MENU DATA ================= */
+
+const menu = {
+
+    pohe:{
+        name:"कांदे पोहे",
+        price:30,
+        qty:0
+    },
+
+    upma:{
+        name:"उपमा",
+        price:30,
+        qty:0
+    },
+
+    dhokla:{
+        name:"ढोकळा (4 pcs)",
+        price:30,
+        qty:0
+    },
+
+    puranpoli:{
+        name:"पुरणपोळी",
+        price:25,
+        qty:0
+    },
+
+    sabudana:{
+        name:"साबुदाणा खिचडी",
+        price:30,
+        qty:0
+    },
+
+    puri:{
+        name:"पुरी भाजी",
+        price:30,
+        qty:0
+    },
+
+    modak:{
+        name:"मोदक (1 pc) - Pre Order",
+        price:30,
+        qty:0
+    }
+
+};
+
+
+/* ================= CHANGE MENU QUANTITY ================= */
+
+function changeQty(item, amount){
+
+    menu[item].qty += amount;
+
+    if(menu[item].qty < 0){
+        menu[item].qty = 0;
+    }
+
+    document.getElementById("qty-"+item).innerText =
+        menu[item].qty;
+
+}
+
+
+/* ================= ADD TO CART ================= */
+
+function addItem(item){
+
+    if(menu[item].qty === 0){
+
+        menu[item].qty = 1;
+
+        document.getElementById("qty-"+item).innerText = 1;
+
+    }
+
+    updateCart();
+
+    document.getElementById("cart")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+/* ================= UPDATE CART ================= */
+
+function updateCart(){
+
+    const cartContent =
+        document.getElementById("cartContent");
+
+    let html = "";
+    let total = 0;
+    let itemFound = false;
+
+
+    for(let key in menu){
+
+        const item = menu[key];
+
+        if(item.qty > 0){
+
+            itemFound = true;
+
+            const itemTotal =
+                item.price * item.qty;
+
+            total += itemTotal;
+
+
+            html += `
+
+                <div class="cart-row">
+
+                    <span>
+                        ${item.name}
+                    </span>
+
+                    <span>
+                        ₹${item.price}
+                    </span>
+
+                    <span class="cart-controls">
+
+                        <button
+                        onclick="changeCartQty('${key}',-1)">
+                            −
+                        </button>
+
+                        ${item.qty}
+
+                        <button
+                        onclick="changeCartQty('${key}',1)">
+                            +
+                        </button>
+
+                    </span>
+
+                    <span>
+                        ₹${itemTotal}
+                    </span>
+
+                </div>
+
+            `;
+
+        }
+
+    }
+
+
+    if(!itemFound){
+
+        html = `
+
+            <div class="empty">
+
+                🛒<br><br>
+
+                तुमची कार्ट रिकामी आहे.<br>
+
+                कृपया मेन्यू मधून पदार्थ जोडा.
+
+            </div>
+
+        `;
+
+    }
+
+
+    cartContent.innerHTML = html;
+
+    document.getElementById("total").innerText =
+        total;
+
+}
+
+
+/* ================= CART QUANTITY ================= */
+
+function changeCartQty(item, amount){
+
+    menu[item].qty += amount;
+
+    if(menu[item].qty < 0){
+        menu[item].qty = 0;
+    }
+
+    document.getElementById("qty-"+item).innerText =
+        menu[item].qty;
+
+    updateCart();
+
+}
+
+
+/* ================= WHATSAPP ORDER ================= */
+
+function sendWhatsApp(){
+
+    let message =
+        "नमस्कार घारचा स्वाद! 👋%0A%0A";
+
+    message +=
+        "मला खालील पदार्थ ऑर्डर करायचे आहेत:%0A%0A";
+
+    let total = 0;
+    let found = false;
+
+
+    for(let key in menu){
+
+        const item = menu[key];
+
+        if(item.qty > 0){
+
+            found = true;
+
+            const itemTotal =
+                item.price * item.qty;
+
+            total += itemTotal;
+
+
+            message +=
+                "• " +
+                item.name +
+                " × " +
+                item.qty +
+                " = ₹" +
+                itemTotal +
+                "%0A";
+
+        }
+
+    }
+
+
+    if(!found){
+
+        alert(
+            "कृपया आधी मेन्यूमधून पदार्थ निवडा."
+        );
+
+        return;
+
+    }
+
+
+    message +=
+        "%0Aएकूण रक्कम: ₹" +
+        total;
+
+
+    message +=
+        "%0A%0A🚫 Home Delivery नाही - Pickup Only";
+
+
+    message +=
+        "%0A%0A📍 Pickup Address:" +
+        "%0AOpposite Balaji Clinic," +
+        "%0ANear Sonapur Lane," +
+        "%0AWorli Koliwada," +
+        "%0AMumbai - 400030";
+
+
+    const phone =
+        "919076285991";
+
+
+    const url =
+        "https://wa.me/" +
+        phone +
+        "?text=" +
+        message;
+
+
+    window.open(url,"_blank");
+
+}
+
+</script>
+
+</body>
+</html>
+```
